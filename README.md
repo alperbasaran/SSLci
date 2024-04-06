@@ -7,10 +7,11 @@ Sertifikayı veren kuruluş, geçerlilik süresi ve geçerlilik süresinin bitme
 
 ## Nasıl kullanılır?
 
-1. sslci.exe'nin bulunduğu klasöre "adresler.txt" adında bir .txt dosyası oluşturup alanadlarını altalta (her satıra bir tane olacak şekilde) yazın.
+1. sslci.exe'nin bulunduğu klasöre "adresler.txt" adında .txt uzantılı bir dosya oluşturup alanadlarını altalta (her satıra bir tane olacak şekilde) yazın.
 2. sslci.exe'ye çift tıklayıp çalıştırın
 3. Programın çalışması bitince oluşan "sertifika_bilgileri.txt" dosyasını kontrol edin
-NOT: Çalışması bitince bir encoding hatası veriyor ancak çalışıyor, dert etmeyiniz. Vaktini bulunca düzelteceğim. 
+### NOT: Çalışması bitince bir encoding hatası veriyor ancak çalışıyor, dert etmeyiniz. Vaktini bulunca düzelteceğim. 
+
 
 ## Neye dikkat etmek lazım?
 Süresi geçmiş veya süresinin bitmesine çok az süre kalan alanadlarınız için yeni sertifika alınması gerekiyor.
