@@ -9,7 +9,7 @@ Sertifikayı veren kuruluş, geçerlilik süresi ve geçerlilik süresinin bitme
 
 1. sslci.exe'nin bulunduğu klasöre "adresler.txt" adında bir .txt dosyası oluşturup alanadlarını altalta (her satıra bir tane olacak şekilde) yazın.
 2. sslci.exe'ye çift tıklayıp çalıştırın
-3. Programın çalışması bitince oluşan "ssl_bilgileri.txt" dosyasını kontrol edin
+3. Programın çalışması bitince oluşan "sertifika_bilgileri.txt" dosyasını kontrol edin
 NOT: Çalışması bitince bir encoding hatası veriyor ancak çalışıyor, dert etmeyiniz. Vaktini bulunca düzelteceğim. 
 
 ## Neye dikkat etmek lazım?
