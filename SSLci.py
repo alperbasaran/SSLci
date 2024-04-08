@@ -1,6 +1,9 @@
 import ssl
 import socket
 from datetime import datetime
+import argparse
+import os
+import sys
 
 # SSL'e bakiyor
 def check_ssl_details(url):
@@ -38,11 +41,21 @@ def main(input_file_path, output_file_path):
                     outfile.write(f"Sertifikayi veren: {details['issuer']}\n")
                     outfile.write(f"Son gecerlilik tarihi: {details['expiration_date']}\n")
                     outfile.write(f"Kalan sure: {details['days_remaining']} gun\n")
-                    outfile.write(f" \n")
+                    outfile.write(" \n")
                 else:
                     outfile.write(f"{details}\n\n")
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='SSLci: SSL sertifikalarini kontrol eden arac')
+    parser.add_argument('--input', type=str, default='adresler.txt', help='Input file path')
+    parser.add_argument('--output', type=str, default='sertifika_bilgileri.txt', help='Output file path')
+    return parser.parse_args().input, parser.parse_args().output
+
+
 if __name__ == "__main__":
-    input_file_path = 'adresler.txt'  # Alanadlarini okuyacagi dosya
-    output_file_path = 'sertifika_bilgileri.txt'  # Olusturulacagi dosya
-    main(input_file_path, output_file_path)
+    input_file, output_file = parse_arguments()
+    if not os.path.exists(input_file):
+        print(f"Input dosyasi bulunamadi: {input_file}")
+        sys.exit(1)
+    
+    main(input_file, output_file)
